@@ -1,0 +1,11 @@
+scikit-learn==1.8.0
+pandas==3.0.2
+numpy==2.4.4
+scipy==1.17.1
+joblib==1.5.3
+ 
+# needed only for the cloud API piece (api.py), untested in the build sandbox
+dbox
+fastapi
+uvicorn
+pydantic

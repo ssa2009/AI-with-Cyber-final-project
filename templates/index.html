@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Cyber for AI PII Detector</title>
+
+   <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <main class="container">
+        <h1>Cyber for AI</h1>
+
+        <p class="description">
+            Check your prompt for personally identifiable information
+            before submitting it to an AI system.
+        </p>
+
+        <label for="promptText">Enter your AI prompt</label>
+
+        <textarea
+            id="promptText"
+            maxlength="10000"
+            placeholder="Type your prompt here..."
+        ></textarea>
+
+        <p id="statusMessage" class="status neutral">
+            Enter text to begin checking.
+        </p>
+
+        <div id="results" class="results" hidden>
+            <h2>Detection results</h2>
+
+            <p>
+                Model probability:
+                <strong id="confidence">0%</strong>
+            </p>
+
+            <div id="detectedItems"></div>
+        </div>
+
+        <button id="submitButton" disabled>
+            Submit to AI
+        </button>
+
+        <p class="notice">
+            This prototype does not send the prompt to an actual
+            large language model.
+        </p>
+    </main>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
